@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: fundweave
+      POSTGRES_PASSWORD: fundweave
+      POSTGRES_DB: fundweave
+    ports:
+      - "54330:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U fundweave"]
+      interval: 2s
+      timeout: 2s
+      retries: 20
