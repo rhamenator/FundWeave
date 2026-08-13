@@ -2,6 +2,15 @@
 name = "fund-weave"
 version = "0.1.0"
 edition = "2024"
+authors = ["Richard M. Hamilton"]
+description = "Departmental fund-control and reconciliation application"
+repository = "https://github.com/rhamenator/FundWeave"
+
+[package.metadata.wix]
+upgrade-guid = "DA9E58BA-BF36-4D97-85F1-43766757C235"
+path-guid = "5B8E294A-6698-4909-B65A-78EA86E2629A"
+license = false
+eula = false
 
 [dependencies]
 serde = { version = "1", features = ["derive"] }
@@ -13,3 +22,8 @@ tokio-postgres = { version = "0.7", features = ["with-serde_json-1"] }
 
 [dev-dependencies]
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
