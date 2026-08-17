@@ -11,6 +11,7 @@ upgrade-guid = "DA9E58BA-BF36-4D97-85F1-43766757C235"
 path-guid = "5B8E294A-6698-4909-B65A-78EA86E2629A"
 license = false
 eula = false
+product-icon = "wix\\Product.ico"
 
 [dependencies]
 serde = { version = "1", features = ["derive"] }
