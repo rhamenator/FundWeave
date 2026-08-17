@@ -1,3 +1,7 @@
+<p align="center">
+  <img src=".github/assets/logo.png" alt="FundWeave logo" width="220">
+</p>
+
 # FundWeave
 
 FundWeave is a clean-room departmental fund-control core. It reserves approved
